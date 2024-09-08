@@ -12,15 +12,26 @@
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : _hp(100), _energy(50), _dmg(20)
+ClapTrap::ClapTrap(void)
 {
-	std::cout << "Default constructor called" << std::endl;
+	_name = "unnamed";
+	_hp = 10;
+	_energy = 10;
+	_dmg = 0;
+	std::cout << "Default constructor called, " << _name << " ClapTrap created"
+		<< std::endl;
+}
+
+ClapTrap::ClapTrap(std::string name) : _hp(10), _energy(10), _dmg(0)
+{
 	this->_name = name;
+	std::cout << "Default constructor called, " << _name << " ClapTrap created"
+		<< std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-   std::cout << "Destructor called" << std::endl;
+   std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 void	ClapTrap::attack(const std::string& target)

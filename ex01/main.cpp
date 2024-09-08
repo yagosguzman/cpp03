@@ -11,13 +11,17 @@
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main(void)
 {
-	ClapTrap first("Yagus");
+	ClapTrap clap("Yagus");
+	ScavTrap scav("Magus");
 
-	first.beRepaired(5);
-	first.takeDamage(70);
-	first.beRepaired(5);
+
+	clap.beRepaired(5);
+	clap.takeDamage(70);
+	clap.beRepaired(5);
+	scav.guardGate();
 	return (0);
 }

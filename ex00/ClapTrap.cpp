@@ -6,21 +6,32 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 19:54:01 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/05 20:47:21 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/05 21:07:02 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(void)
+{
+	_name = "unnamed";
+	_hp = 10;
+	_energy = 10;
+	_dmg = 0;
+	std::cout << "Default constructor called, " << _name << "Claptrap created"
+		<< std::endl;
+}
+
 ClapTrap::ClapTrap(std::string name) : _hp(10), _energy(10), _dmg(0)
 {
-	std::cout << "Default constructor called" << std::endl;
 	this->_name = name;
+	std::cout << "Default constructor called, ClapTrap" << _name << " created"
+		<< std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-   std::cout << "Destructor called" << std::endl;
+   std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 void	ClapTrap::attack(const std::string& target)

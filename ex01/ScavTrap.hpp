@@ -17,16 +17,11 @@
 
 class ScavTrap : public ClapTrap
 {
-private:
-	std::string		_name;
-	unsigned int	_hp;
-	unsigned int	_energy;
-	unsigned int	_dmg;
-
-public:
-	// ScavTrap : public ClapTrap(/* args */);
-	// ~ScavTrap : public ClapTrap();
-	void	guardGate(void);
+	public:
+		ScavTrap(void);
+		ScavTrap(std::string name);
+		~ScavTrap();	
+		void	guardGate(void);
 };
 
 #endif
