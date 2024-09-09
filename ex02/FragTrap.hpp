@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/05 19:54:26 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 19:45:29 by ysanchez         ###   ########.fr       */
+/*   Created: 2024/09/09 20:10:49 by ysanchez          #+#    #+#             */
+/*   Updated: 2024/09/09 20:15:42 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-#include <iostream>
+#include "ClapTrap.hpp"
 
-class ClapTrap
+class FragTrap : public ClapTrap
 {
-protected:
-	std::string		_name;
-	unsigned int	_hp;
-	unsigned int	_energy;
-	unsigned int	_dmg;
 
 public:
-	ClapTrap();
-	ClapTrap(std::string name);
-	ClapTrap(ClapTrap& copy);
-	~ClapTrap();
-
+	FragTrap(void);
+	FragTrap(std::string name);
+	FragTrap(FragTrap& copy);
+	~FragTrap();
+	void	highFivesGuys(void);
 	void	attack(const std::string& target);
-	void	takeDamage(unsigned int amount);
-	void	beRepaired(unsigned int amount);
-	std::string getName(void);
 };
 
 #endif

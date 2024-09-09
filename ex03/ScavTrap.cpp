@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 20:59:38 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:00 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/09 20:18:25 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap(void) : ClapTrap()
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
-	this->_name = name;
+	_name = name;
 	_hp = 100;
 	_energy = 50;
 	_dmg = 20;

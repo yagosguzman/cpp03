@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 19:54:01 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/05 21:07:02 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/09 20:03:39 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,16 @@ ClapTrap::ClapTrap(std::string name) : _hp(10), _energy(10), _dmg(0)
 		<< std::endl;
 }
 
+ClapTrap::ClapTrap(ClapTrap& copy)
+{
+	std::cout << "Copy constructor for Claptrap called" << std::endl;
+	_name = copy._name;
+	_hp = copy._hp;
+	_energy = copy._energy;
+	_dmg = copy._dmg;
+}
+
+
 ClapTrap::~ClapTrap()
 {
    std::cout << "ClapTrap destructor called" << std::endl;
@@ -36,7 +46,9 @@ ClapTrap::~ClapTrap()
 
 void	ClapTrap::attack(const std::string& target)
 {
-	if (_energy > 0)
+	if (_hp < 1)
+		std::cout << "ClapTrap " << _name << " can't attack because it has no HP left" << std::endl;
+	else if (_energy > 0)
 	{
 		_energy--;
 		std::cout << "ClapTrap " << _name << " attacks " << target

@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/05 21:00:04 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 19:58:01 by ysanchez         ###   ########.fr       */
+/*   Created: 2024/09/05 20:34:59 by ysanchez          #+#    #+#             */
+/*   Updated: 2024/09/09 20:59:47 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
-
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
-class ScavTrap : public ClapTrap
+int main(void)
 {
-	public:
-		ScavTrap(void);
-		ScavTrap(std::string name);
-		ScavTrap(ScavTrap& copy);
-		~ScavTrap();	
-		void	guardGate(void);
-		void	attack(const std::string& target);
-};
+	// ClapTrap clap("Yagus");
+	// ScavTrap scav("Magus");
+	DiamondTrap dt("EvilYagus");
 
-#endif
+	dt.highFivesGuys();
+	// clap.beRepaired(5);
+	// clap.takeDamage(70);
+	// clap.beRepaired(5);
+	// scav.guardGate();
+	// scav.attack(clap.getName());
+	// clap.attack(scav.getName());
+	return (0);
+}
