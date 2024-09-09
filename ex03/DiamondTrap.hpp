@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 20:31:36 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 20:57:22 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/09 21:10:39 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ public:
 	DiamondTrap(DiamondTrap& copy);
 	~DiamondTrap();
 	void	whoAmI(void);
+	using ScavTrap::attack;
 };
 
 #endif
