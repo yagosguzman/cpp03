@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 20:16:06 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 20:24:34 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 21:45:48 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ FragTrap::~FragTrap()
 
 void	FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << _name << " raise its arm to high five you, "
+	std::cout << "FragTrap " << _name << " raises its arm to high five you, "
 		<< "don't disappoint him :(" << std::endl;
 }
 
