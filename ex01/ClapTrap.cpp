@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 19:54:01 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/19 19:58:14 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 20:41:24 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,19 @@ ClapTrap::ClapTrap(void)
 	_hp = 10;
 	_energy = 10;
 	_dmg = 0;
-	std::cout << "Default constructor called, " << _name << " ClapTrap created"
-		<< std::endl;
+	std::cout << "Default constructor called, " << _name << " Claptrap created" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _hp(10), _energy(10), _dmg(0)
 {
 	this->_name = name;
-	std::cout << "Default constructor called, " << _name << " ClapTrap created"
-		<< std::endl;
+	std::cout << "Default constructor called, ClapTrap " << _name << " created" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap& copy)
 {
 	std::cout << "Copy constructor for Claptrap called" << std::endl;
-	_name = copy._name;
-	_hp = copy._hp;
-	_energy = copy._energy;
-	_dmg = copy._dmg;
+	*this = copy;
 }
 
 ClapTrap::~ClapTrap()
@@ -45,7 +40,10 @@ ClapTrap::~ClapTrap()
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& src)
 {
-	*this = src;
+	_name = src._name;
+	_hp = src._hp;
+	_energy = src._energy;
+	_dmg = src._dmg;
 	return (*this);
 }
 
@@ -69,7 +67,10 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	if (_hp > 0)
 	{
 		if (amount > _hp)
+		{
+			amount = _hp;
 			_hp = 0;
+		}
 		else
 			_hp -= amount;
 		std::cout << "ClapTrap " << _name << " receives " << amount 
@@ -98,7 +99,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 }
 
-std::string ClapTrap::getName(void)
+std::string	ClapTrap::getName(void)
 {
 	return (this->_name);
 }

@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 19:54:26 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/19 19:24:43 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 20:13:27 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-protected:
+private:
 	std::string		_name;
 	unsigned int	_hp;
 	unsigned int	_energy;

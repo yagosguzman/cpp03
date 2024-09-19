@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 20:59:38 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:00 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 20:41:11 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,14 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap destructor called" << std::endl;
 }
 
+ScavTrap& ScavTrap::operator=(const ScavTrap& src)
+{
+	_name = src._name;
+	_hp = src._hp;
+	_energy = src._energy;
+	_dmg = src._dmg;
+	return (*this);
+}
 
 void	ScavTrap::guardGate(void)
 {
