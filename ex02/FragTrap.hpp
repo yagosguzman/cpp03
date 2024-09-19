@@ -6,13 +6,14 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 20:10:49 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/19 20:01:29 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 21:57:28 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
+#include <iostream>
 #include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap

@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 19:54:01 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:22 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 22:13:37 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,9 @@ ClapTrap::ClapTrap(void)
 		<< std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : _hp(10), _energy(10), _dmg(0)
+ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _energy(10), _dmg(0)
 {
-	this->_name = name;
-	std::cout << "Default constructor called, " << _name << " ClapTrap created"
-		<< std::endl;
+	std::cout << "Default constructor called, " << _name << " ClapTrap created" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap& copy)

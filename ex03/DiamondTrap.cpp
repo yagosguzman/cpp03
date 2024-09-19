@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 20:50:43 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 21:07:55 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 22:17:25 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ DiamondTrap::~DiamondTrap()
 
 void	DiamondTrap::whoAmI(void)
 {
-	std::cout << "My true name is " << _name << std::endl;
+	std::cout << "My true name is " << this->_name << std::endl;
 	std::cout << "My ClapTrap name is " << ClapTrap::_name << std::endl;
 }

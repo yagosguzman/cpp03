@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 20:10:49 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/19 20:03:22 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 21:56:52 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FRAGTRAP_HPP
 
 #include "ClapTrap.hpp"
+#include <iostream>
+
 
 class FragTrap : virtual public ClapTrap
 {

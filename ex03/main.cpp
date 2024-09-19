@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 20:34:59 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 20:59:47 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 22:04:13 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,13 @@
 
 int main(void)
 {
-	// ClapTrap clap("Yagus");
-	// ScavTrap scav("Magus");
-	DiamondTrap dt("EvilYagus");
+	DiamondTrap dt("Frankie");
 
 	dt.highFivesGuys();
-	// clap.beRepaired(5);
-	// clap.takeDamage(70);
-	// clap.beRepaired(5);
-	// scav.guardGate();
-	// scav.attack(clap.getName());
-	// clap.attack(scav.getName());
+	dt.beRepaired(5);
+	dt.takeDamage(70);
+	dt.guardGate();
+	dt.attack("Pepe");
+	dt.whoAmI();
 	return (0);
 }
