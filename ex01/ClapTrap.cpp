@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 19:54:01 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 20:03:22 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 19:58:14 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ ClapTrap::ClapTrap(ClapTrap& copy)
 ClapTrap::~ClapTrap()
 {
    std::cout << "ClapTrap destructor called" << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& src)
+{
+	*this = src;
+	return (*this);
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -95,4 +101,9 @@ void	ClapTrap::beRepaired(unsigned int amount)
 std::string ClapTrap::getName(void)
 {
 	return (this->_name);
+}
+
+void		ClapTrap::setName(std::string name)
+{
+	this->_name = name;
 }

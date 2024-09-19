@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 19:54:26 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/09 19:45:29 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/19 19:24:43 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,13 @@ public:
 	ClapTrap(ClapTrap& copy);
 	~ClapTrap();
 
+	ClapTrap& operator=(const ClapTrap& src);
+
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 	std::string getName(void);
+	void		setName(std::string name);
 };
 
 #endif
