@@ -6,14 +6,25 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 20:50:43 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/19 22:17:25 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/23 18:16:09 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name), _name(name)
+DiamondTrap::DiamondTrap(void) : ClapTrap(), FragTrap(), ScavTrap(), _name("unnamed")
 {
+	ClapTrap::_name += "_clap_name";
+	_hp = FragTrap::_hp;
+	_energy = ScavTrap::_energy;
+	_dmg = FragTrap::_dmg;
+	std::cout << "DiamondTrap constructor called, " << _name << " DiamondTrap created"
+		<< std::endl;
+}
+
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name), FragTrap(name), ScavTrap(name), _name(name)
+{
+	ClapTrap::_name = name + "_clap_name";
 	_hp = FragTrap::_hp;
 	_energy = ScavTrap::_energy;
 	_dmg = FragTrap::_dmg;

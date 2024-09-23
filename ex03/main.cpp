@@ -6,7 +6,7 @@
 /*   By: ysanchez <ysanchez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 20:34:59 by ysanchez          #+#    #+#             */
-/*   Updated: 2024/09/19 22:04:13 by ysanchez         ###   ########.fr       */
+/*   Updated: 2024/09/23 18:20:41 by ysanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 int main(void)
 {
-	DiamondTrap dt("Frankie");
+	DiamondTrap dt("Diam");
+	DiamondTrap unnamed;
 
 	dt.highFivesGuys();
 	dt.beRepaired(5);
@@ -25,5 +26,7 @@ int main(void)
 	dt.guardGate();
 	dt.attack("Pepe");
 	dt.whoAmI();
+	unnamed.attack("Luis");
+	unnamed.whoAmI();
 	return (0);
 }
