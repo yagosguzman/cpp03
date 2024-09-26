@@ -46,6 +46,16 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "DiamondTrap destructor called" << std::endl;
 }
 
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap& src)
+{
+	_name = src.getName();
+	_hp = src._hp;
+	_energy = src._energy;
+	_dmg = src._dmg;
+	return (*this);
+}
+
+
 void	DiamondTrap::whoAmI(void)
 {
 	std::cout << "My true name is " << this->_name << std::endl;
